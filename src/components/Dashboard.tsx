@@ -1,5 +1,5 @@
 import ProjectCard from './ProjectCard'
-import LiveExploits from './LiveExploits'
+import FullCatalog from './FullCatalog'
 import { projects } from '../data/projects'
 
 const Dashboard = () => {
@@ -13,9 +13,46 @@ const Dashboard = () => {
             Premium Cheats, Exploits, Tools & Live Community Updates
           </p>
           <p className="text-gray-400 text-base font-body leading-relaxed max-w-3xl">
-            Your central hub for cutting-edge exploits, gaming tools, ChromeOS utilities, and real-time community discoveries. 
-            Designed for advanced users seeking the latest in educational security research and development tools.
+            Comprehensive repository of exploits, tools, tutorials, and resources all in one place. 
+            Everything from beginner webview exploits to advanced ChromeOS unenrollment techniques. 
+            Your complete resource for educational security research and ChromeOS exploitation.
           </p>
+          {/* Stats Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-4 max-w-3xl">
+            <div className="p-3 bg-red-500/5 border border-red-500/20 rounded-lg">
+              <div className="flex flex-col gap-1">
+                <span className="text-2xl font-bold text-red-400">475</span>
+                <span className="text-xs text-gray-400 uppercase tracking-wider">Exploits</span>
+              </div>
+            </div>
+            <div className="p-3 bg-blue-500/5 border border-blue-500/20 rounded-lg">
+              <div className="flex flex-col gap-1">
+                <span className="text-2xl font-bold text-blue-400">142</span>
+                <span className="text-xs text-gray-400 uppercase tracking-wider">Tools</span>
+              </div>
+            </div>
+            <div className="p-3 bg-cyan-500/5 border border-cyan-500/20 rounded-lg">
+              <div className="flex flex-col gap-1">
+                <span className="text-2xl font-bold text-cyan-400">36</span>
+                <span className="text-xs text-gray-400 uppercase tracking-wider">Proxies</span>
+              </div>
+            </div>
+            <div className="p-3 bg-pink-500/5 border border-pink-500/20 rounded-lg">
+              <div className="flex flex-col gap-1">
+                <span className="text-2xl font-bold text-pink-400">673</span>
+                <span className="text-xs text-gray-400 uppercase tracking-wider">Total</span>
+              </div>
+            </div>
+          </div>
+          
+          <div className="flex items-start gap-2 mt-3 p-3 bg-primary/5 border border-primary/20 rounded-lg max-w-3xl">
+            <span className="material-symbols-outlined text-primary text-sm flex-shrink-0 mt-0.5">
+              inventory_2
+            </span>
+            <p className="text-primary text-sm font-body leading-relaxed">
+              <strong>Complete Repository Access:</strong> All 673 files from 3 Git submodules indexed and searchable. Includes ext-remover, Corellium, and chromebook-utilities repositories.
+            </p>
+          </div>
         </div>
         
         <div className="flex flex-wrap gap-3 mt-2">
@@ -66,8 +103,8 @@ const Dashboard = () => {
         ))}
       </div>
 
-      {/* Live Exploits Section */}
-      <LiveExploits />
+      {/* Full Catalog Section - ALL 673 items from submodules */}
+      <FullCatalog />
     </>
   )
 }

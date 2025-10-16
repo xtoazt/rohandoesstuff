@@ -23,17 +23,19 @@ const Header = ({ className = '' }: HeaderProps) => {
           </a>
           <a 
             className="text-gray-400 hover:text-primary text-sm font-medium leading-normal transition-colors" 
-            href="https://github.com/Burvyn/Corellium"
+            href="https://github.com/3kh0/ext-remover/discussions"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Repository
+            Community
           </a>
           <a 
             className="text-gray-400 hover:text-primary text-sm font-medium leading-normal transition-colors" 
-            href="#"
+            href="https://discord.gg/unblock"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Contact
+            Discord
           </a>
         </div>
       </div>

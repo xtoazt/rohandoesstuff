@@ -1,0 +1,9 @@
+[submodule "repos/ext-remover"]
+	path = repos/ext-remover
+	url = https://github.com/3kh0/ext-remover.git
+[submodule "repos/corellium"]
+	path = repos/corellium
+	url = https://github.com/Burvyn/Corellium.git
+[submodule "repos/chromebook-utilities"]
+	path = repos/chromebook-utilities
+	url = https://github.com/S-PScripts/chromebook-utilities.git

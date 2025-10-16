@@ -1,12 +1,19 @@
-# rohandoesstuff - Portfolio Website
+# rohandoesstuff - Complete Exploitation Resource Hub
 
-A modern, dark-themed portfolio website showcasing premium tools and live community exploits - built with React, TypeScript, and Tailwind CSS.
+The ultimate all-in-one platform with **673 exploits, tools, and resources** from multiple repositories - built with React, TypeScript, and Tailwind CSS.
 
 ## About
 
-**Premium Cheats, Exploits, Tools & Live Community Updates**
+**Your Complete ChromeOS Exploitation Database**
 
-Your central hub for cutting-edge exploits, gaming tools, ChromeOS utilities, and real-time community discoveries from [3kh0/ext-remover discussions](https://github.com/3kh0/ext-remover/discussions). Designed for advanced users seeking the latest in educational security research and development tools.
+Access **ALL 673 files** from the top exploitation repositories in one searchable interface:
+- **475 Exploits** from ext-remover, Corellium, and chromebook-utilities
+- **142 Tools** including scripts, bookmarklets, and utilities
+- **36 Proxy Collections** and unblock methods
+- **12 Learning Resources** with tutorials and guides
+- **8 Game Categories** for entertainment
+
+Everything is indexed, searchable, and filterable. No more browsing through multiple GitHub repos - find what you need instantly.
 
 ## Features
 
@@ -17,9 +24,12 @@ Your central hub for cutting-edge exploits, gaming tools, ChromeOS utilities, an
 - 🔷 Built with TypeScript for type safety
 - 🎭 Material Symbols icons
 - 📊 Project showcase with progress indicators
-- 🎮 Interactive repository content display
-- 🔴 Live exploits feed from community discussions
-- 🔍 Filtered content (exploits and webviews only)
+- 💻 **673 Total Items** - Complete catalog from 3 repositories
+- 🔍 **Advanced Search** - Real-time filtering across all items
+- 📁 **Git Submodules** - Always up-to-date with source repos
+- 🏷️ **Smart Categorization** - Exploits, tools, proxies, games, resources
+- 🎯 **Multiple Sources** - ext-remover, Corellium, chromebook-utilities
+- 🔄 **Auto-Indexing** - One command to refresh entire catalog
 
 ## Tech Stack
 
@@ -36,12 +46,21 @@ Your central hub for cutting-edge exploits, gaming tools, ChromeOS utilities, an
 
 - Node.js (v18 or higher recommended)
 - npm or yarn
+- Git
 
 ### Installation
 
-1. Clone the repository or navigate to the project directory:
+1. Clone the repository **with submodules**:
 ```bash
-cd /Users/rohan/rohandoesstuff
+git clone --recursive https://github.com/yourusername/rohandoesstuff.git
+cd rohandoesstuff
+```
+
+Or if already cloned:
+```bash
+cd rohandoesstuff
+git submodule init
+git submodule update
 ```
 
 2. Install dependencies:
@@ -49,12 +68,30 @@ cd /Users/rohan/rohandoesstuff
 npm install
 ```
 
-3. Start the development server:
+3. Index all exploits (creates searchable database):
+```bash
+npm run index-exploits
+```
+
+4. Start the development server:
 ```bash
 npm run dev
 ```
 
 The site will be available at `http://localhost:5173`
+
+### Updating the Catalog
+
+To get the latest exploits from all source repositories:
+
+```bash
+npm run refresh-catalog
+```
+
+This will:
+1. Pull latest changes from all Git submodules
+2. Re-index all 673+ files
+3. Update the searchable database
 
 ### Building for Production
 
@@ -78,59 +115,141 @@ npm run preview
 rohandoesstuff/
 ├── src/
 │   ├── components/
-│   │   ├── Header.tsx          # Navigation header
-│   │   ├── Footer.tsx          # Footer with social links
-│   │   ├── Dashboard.tsx       # Main dashboard view
-│   │   ├── ProjectCard.tsx     # Individual project cards
-│   │   └── LiveExploits.tsx    # Live exploits feed
+│   │   ├── Header.tsx           # Navigation header
+│   │   ├── Footer.tsx           # Footer with social links
+│   │   ├── Dashboard.tsx        # Main dashboard view
+│   │   ├── ProjectCard.tsx      # Individual project cards
+│   │   └── FullCatalog.tsx      # Complete catalog (673 items)
 │   ├── data/
-│   │   ├── projects.ts         # Project data
-│   │   └── discussions.ts      # Live exploits feed data
-│   ├── App.tsx                 # Main app component
-│   ├── main.tsx                # App entry point
-│   └── index.css               # Global styles
-├── index.html                  # HTML template
-├── tailwind.config.js          # Tailwind configuration
-├── tsconfig.json               # TypeScript configuration
-├── vite.config.ts              # Vite configuration
-└── package.json                # Project dependencies
+│   │   ├── projects.ts          # Project showcase data
+│   │   ├── exploits.ts          # Curated exploits with details
+│   │   ├── tools.ts             # Curated tools collection
+│   │   ├── resources.ts         # Learning resources
+│   │   └── indexed/
+│   │       ├── complete-index.json  # All 673 indexed items
+│   │       ├── exploits-index.json  # 475 exploits
+│   │       ├── tools-index.json     # 142 tools
+│   │       ├── proxies-index.json   # 36 proxies
+│   │       ├── games-index.json     # 8 game categories
+│   │       ├── resources-index.json # 12 resources
+│   │       └── types.ts             # TypeScript interfaces
+│   ├── App.tsx                  # Main app component
+│   ├── main.tsx                 # App entry point
+│   └── index.css                # Global styles
+├── repos/                       # Git submodules
+│   ├── ext-remover/             # 3kh0's ext-remover repo
+│   ├── corellium/               # Burvyn's Corellium repo
+│   └── chromebook-utilities/    # S-PScripts utilities
+├── scripts/
+│   └── index-exploits.js        # Repository indexer
+├── index.html                   # HTML template
+├── .gitmodules                  # Submodule configuration
+├── tailwind.config.js           # Tailwind configuration
+├── tsconfig.json                # TypeScript configuration
+├── vite.config.ts               # Vite configuration
+└── package.json                 # Project dependencies
 ```
 
-## Repository Contents
+## Complete Catalog (673 Items)
 
-The portfolio showcases the following categories:
+### 💻 Exploits & Tools (475 items)
+Everything from the source repositories:
+- **Webview Exploits** - App-based browser access
+- **Extension Manipulation** - Remove/disable monitoring
+- **ChromeOS Exploits** - System-level access methods
+- **Bypass Scripts** - Filter circumvention tools
+- **Bookmarklets** - JavaScript-based utilities
+- **Network Tools** - DNS and proxy configurations
+- Plus hundreds more...
 
-- **Advanced Cheats** - Collection of advanced cheats and exploits
-- **Game Library** - Extensive collection of games and game mods
-- **Exploits and Tools** - Utilities for enhancing functionality
-- **Hubs** - Multi-functional integration tools
-- **OS Modifications** - Operating system tools and scripts
-- **Prxes Collection** - Proxies and network utilities
-- **Tutorials** - Comprehensive guides
-- **Entertainment** - Miscellaneous media content
-- **Bookmarklets** - Browser-based utilities
+### 🛠️ Tools Collection (142 items)
+Scripts, utilities, and automation:
+- Extension removers and managers
+- Policy bypass tools
+- System manipulation scripts
+- Automation utilities
+- Configuration files
+- Helper scripts
 
-### Live Exploits Feed
+### 🌐 Proxy Collection (36 items)
+Web proxies and unblockers:
+- Titanium Network proxies
+- Ultraviolet implementations
+- Rammerhead proxies
+- Custom proxy configs
+- Unblock hub links
+- Mirror sites
 
-The site features a live section that displays recent discussions from [3kh0/ext-remover](https://github.com/3kh0/ext-remover/discussions), automatically filtered to show:
-- 💻 **Exploits** - New bypass methods and security discoveries
-- 🌐 **Webviews** - Browser-based exploit discoveries
+### 🎮 Games & Entertainment (8 categories)
+Game libraries and hubs:
+- Sorted game collections (3kh0, Pizza Edition, etc.)
+- Emulator links
+- Console games
+- App links (Minecraft, Roblox, etc.)
+- Entertainment resources
 
-Questions, help requests, and general discussions are filtered out to maintain focus on actionable exploits.
+### 📚 Learning Resources (12 items)
+Tutorials and documentation:
+- Setup guides
+- Hosting tutorials
+- IP address guides
+- Technical documentation
+- Community resources
 
 ## Customization
 
-### Adding Projects
+### Adding New Exploits
 
-Edit `src/data/projects.ts` to add or modify projects:
+Edit `src/data/exploits.ts` to add exploits:
 
 ```typescript
 {
-  title: "Your Project Name",
-  progress: 75,  // Progress percentage (0-100)
-  imageUrl: "https://your-image-url.com/image.jpg",
-  status: 'In Dev' | 'On Hold' | null,
-  description: "Brief description of the project"
+  id: "unique-id",
+  title: "Exploit Name",
+  category: "Webview" | "ChromeOS" | "Bypass" | "VM" | "Extension" | "Network",
+  description: "What the exploit does",
+  difficulty: "Easy" | "Medium" | "Hard",
+  status: "Working" | "Patched" | "Untested",
+  author: "Your Name",
+  dateAdded: "Oct 16, 2025",
+  tags: ["tag1", "tag2"],
+  requirements: ["Requirement 1", "Requirement 2"],
+  instructions: "Step by step instructions",
+  notes: "Important notes and warnings"
+}
+```
+
+### Adding Tools
+
+Edit `src/data/tools.ts`:
+
+```typescript
+{
+  id: "tool-id",
+  name: "Tool Name",
+  description: "What it does",
+  category: "Extension Manager" | "Proxy" | "Unblock" | "System" | "Network" | "Utility",
+  url: "https://github.com/...",
+  features: ["Feature 1", "Feature 2"],
+  difficulty: "Easy" | "Medium" | "Hard",
+  tags: ["tag1", "tag2"]
+}
+```
+
+### Adding Resources
+
+Edit `src/data/resources.ts`:
+
+```typescript
+{
+  id: "resource-id",
+  title: "Resource Title",
+  description: "What it covers",
+  type: "Guide" | "Tutorial" | "Documentation" | "Community" | "Repository",
+  difficulty: "Beginner" | "Intermediate" | "Advanced",
+  url: "https://...",
+  topics: ["topic1", "topic2"],
+  icon: "material_icon_name"
 }
 ```
 
@@ -157,23 +276,18 @@ Update the navigation links in `src/components/Header.tsx`.
 - `npm run build` - Build for production
 - `npm run preview` - Preview production build
 - `npm run lint` - Run ESLint
+- `npm run update-repos` - Pull latest changes from all submodules
+- `npm run index-exploits` - Re-index all repository files
+- `npm run refresh-catalog` - Update repos + re-index (one command)
 
-## Updating Live Feed
+## Content Sources
 
-To update the live exploits feed, edit `src/data/discussions.ts`. The structure is designed to be easily integrated with the GitHub API for automatic updates.
-
-```typescript
-{
-  title: "Exploit Name",
-  category: "Exploits" | "Webview",
-  author: "username",
-  date: "Oct 16, 2025",
-  replies: 5,
-  votes: 2,
-  url: "https://github.com/3kh0/ext-remover/discussions/...",
-  emoji: "💻" // or "🌐"
-}
-```
+This platform aggregates content from multiple trusted sources:
+- [3kh0/ext-remover](https://github.com/3kh0/ext-remover) - Primary exploits and discussions
+- [Burvyn/Corellium](https://github.com/Burvyn/Corellium) - Tools and utilities repository
+- [S-PScripts/chromebook-utilities](https://github.com/S-PScripts/chromebook-utilities) - ChromeOS tools
+- Titanium Network Discord - Community discoveries
+- Various security researchers and contributors
 
 ## Disclaimer
 
