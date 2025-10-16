@@ -1,0 +1,33 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "primary": "#00FF00",
+        "background-light": "#F5F5F5",
+        "background-dark": "#0A0F14",
+        "card-dark": "#101922"
+      },
+      fontFamily: {
+        "display": ["Space Grotesk", "sans-serif"],
+        "body": ["Chakra Petch", "sans-serif"]
+      },
+      borderRadius: {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      animation: {
+        'pulse': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+      },
+    },
+  },
+  plugins: [],
+}
+
