@@ -1,6 +1,6 @@
 import { useState, useMemo } from 'react';
 import completeIndex from '../data/indexed/complete-index.json';
-import type { CompleteIndex, IndexedItem } from '../data/indexed/types';
+import type { CompleteIndex } from '../data/indexed/types';
 
 const index = completeIndex as CompleteIndex;
 
